@@ -1,5 +1,5 @@
 # NextJS Blog Webapp
-This is a TypeScript React application built with Next.js. It allows users with the editor role or higher to upload articles, manage user profiles, and includes features such as form validation with Zod and authentication with NextAuth.js.
+This is a TypeScript React application built with Next.js. It allows users with the editor role or higher to writea and upload articles, manage user profiles, and includes features such as form validation with Zod and authentication with NextAuth.js.
 
 ## Features
 
