@@ -60,7 +60,7 @@ const AuthForm: React.FC<AuthFormProps> = ({}) => {
     } catch (error : any) {
       console.log(error);
       console.log('yo')
-      toast.error(`Error: ${error?.response?.data || error?.message}`);
+      toast.error(`Error: ${error?.response?.data?.message || error?.message}`);
     }
   };
   const onSignup = async (values: z.infer<typeof signupFormSchema>) => {
@@ -79,8 +79,8 @@ const AuthForm: React.FC<AuthFormProps> = ({}) => {
       //router.push('/explore')
     } catch (error : any) {
       console.log(error);
-      console.log('yo')
-      toast(`Error: ${error?.response?.data || 'Something went wrong'}`)
+      //console.log('yo')
+      toast.error(`Error: ${error?.response?.data?.message || error?.message}`);
     }
   };
   const loginForm = useForm<z.infer<typeof loginFormSchema>>({
