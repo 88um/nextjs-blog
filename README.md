@@ -4,6 +4,7 @@ This is a TypeScript React application built with Next.js. It allows users with 
 ## Features
 
 - **Next.js:** The application is built with Next.js, a React framework that enables server-side rendering, routing, and more.
+- **Tiptap Editor with OpenAI Autocomplete:** The application utilizes the Tiptap editor, which offers a rich text editing experience, and leverages OpenAI's autocomplete functionality to enhance the user experience by providing AI-powered suggestions and autocomplete features.
 - **Prisma with Supabase PostgreSQL:** Prisma is used as the ORM for interacting with a Supabase PostgreSQL database, providing a seamless and type-safe database access layer.
 - **Form Validation with Zod:** Zod is used for form validation, ensuring that user input is validated against defined schemas before submission.
 - **NextAuth.js:** Authentication is implemented with NextAuth.js, providing authentication and authorization features such as social login, email/password authentication, and JSON Web Token (JWT) authentication.
