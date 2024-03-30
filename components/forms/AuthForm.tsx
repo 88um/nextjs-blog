@@ -53,7 +53,7 @@ const AuthForm: React.FC<AuthFormProps> = ({}) => {
       });
       if (response?.ok) {
         toast.success('Successfully Logged in');
-        router.push("/dashboard");
+        router.push("/explore");
       } else {
         throw new Error("Invalid Credentials");
       }
@@ -76,7 +76,8 @@ const AuthForm: React.FC<AuthFormProps> = ({}) => {
         throw new Error("Sign up failed");
       }
       toast.success('Successfully registered');
-      //router.push('/explore')
+      form.reset()
+      router.push('/explore')
     } catch (error : any) {
       console.log(error);
       //console.log('yo')
