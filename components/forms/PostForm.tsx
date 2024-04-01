@@ -106,7 +106,7 @@ const PostForm: React.FC<PostFormProps> = ({ initialValues }) => {
             router.push(`/posts/${response.data.pathName}`)
         } catch (error: any) {
             if (error.response?.data) {
-                toast.error(error.response.data.message);
+                toast.error(error.response.data);
             } else {
                 toast.error("Oops, something went wrong");
             }

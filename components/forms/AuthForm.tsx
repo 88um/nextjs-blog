@@ -60,7 +60,7 @@ const AuthForm: React.FC<AuthFormProps> = ({}) => {
     } catch (error : any) {
       console.log(error);
       console.log('yo')
-      toast.error(`Error: ${error?.response?.data?.message || error?.message}`);
+      toast.error(`Error: ${error?.response?.data || error?.message}`);
     }
   };
   const onSignup = async (values: z.infer<typeof signupFormSchema>) => {

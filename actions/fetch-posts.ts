@@ -9,6 +9,7 @@ export async function getAllPosts(tag?: string, searchTerm : string = ""){
     if (tag) {
         cur_posts = await prisma.post.findMany({
             where: {
+                isApproved:true,
                 tags: {
                     some: {
                         name: tag 
@@ -34,6 +35,7 @@ export async function getAllPosts(tag?: string, searchTerm : string = ""){
                 tags:true
             },
             where:{
+                isApproved:true,
                 OR: [
                     { title: { contains: searchTerm } },
                     { content: { contains: searchTerm } }
