@@ -52,7 +52,7 @@ const ExplorePage = async ({ searchParams }: page) => {
         {posts.length == 0 ? (
           <div className="flex flex-col items-center justify-center">
       
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Oops, No Posts Found </h1>
+          <h1 className="text-lg font-bold text-muted-foreground pt-24">Oops, No Posts Found </h1>
           
         </div>
         ): (

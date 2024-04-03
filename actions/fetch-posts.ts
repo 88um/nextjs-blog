@@ -17,7 +17,8 @@ export async function getAllPosts(tag?: string, searchTerm : string = ""){
                 },
                 OR: [
                     { title: { contains: searchTerm } },
-                    { content: { contains: searchTerm } }
+                    { content: { contains: searchTerm } },
+                    {description: {contains: searchTerm}}
                 ]
             },
             include:{
@@ -38,7 +39,8 @@ export async function getAllPosts(tag?: string, searchTerm : string = ""){
                 isApproved:true,
                 OR: [
                     { title: { contains: searchTerm } },
-                    { content: { contains: searchTerm } }
+                    { content: { contains: searchTerm } },
+                    { description: {contains: searchTerm}}
                 ]
             },
             orderBy: {
