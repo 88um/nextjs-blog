@@ -27,20 +27,7 @@ const ExplorePage = async ({ searchParams }: page) => {
   const end = start + Number(limit);
   const totalPages = Math.ceil(postz.length / Number(limit));
   const posts = postz.slice(start, end);
-  if (postz.length == 0){
-    return (
-
-      <div className="flex flex-col items-center justify-center h-screen">
-   
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Oops, No Results Were Found </h1>
-        <Link href="/explore">
-          <p className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-            Go back to explore
-          </p>
-        </Link>
-      </div>
-    )
-  }
+  
 
   if (Number(page) > totalPages) {
     return (
@@ -60,12 +47,26 @@ const ExplorePage = async ({ searchParams }: page) => {
       <div className="flex flex-col space-y-4">
         <TagList tags={tags} selectedTag={searchParams.tag}/>
         <SearchBar/>
-        <p className="text-muted-foreground pt-7 mb-3 tracking-[0.095em] uppercase font-semibold text-xs">
-          {postz.length} Total Posts
-        </p>
+        
         {/* @ts-ignore */}
-        <PostsList postz={posts}/>
-        <Pager hasNext={end < postz.length} totalPages={totalPages} page={Number(page)} limit={Number(limit)} />
+        {posts.length == 0 ? (
+          <div className="flex flex-col items-center justify-center">
+      
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Oops, No Posts Found </h1>
+          
+        </div>
+        ): (
+          <>
+          
+          <p className="text-muted-foreground pt-7 mb-3 tracking-[0.095em] uppercase font-semibold text-xs">
+          {postz.length} Total Posts
+          </p>
+          {/* @ts-ignore */}
+          <PostsList postz={posts}/>
+          <Pager hasNext={end < postz.length} totalPages={totalPages} page={Number(page)} limit={Number(limit)} />
+          </>
+        )}
+        
       </div>
     </div>
 
