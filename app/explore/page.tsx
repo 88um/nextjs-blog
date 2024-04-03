@@ -29,7 +29,7 @@ const ExplorePage = async ({ searchParams }: page) => {
   const posts = postz.slice(start, end);
   
 
-  if (Number(page) > totalPages) {
+  if (Number(page) > totalPages && posts.length > 0) {
     return (
       <div className="flex flex-col items-center justify-center h-screen">
       
