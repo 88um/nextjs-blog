@@ -59,7 +59,7 @@ const ExplorePage = async ({ searchParams }: page) => {
           <>
           
           <p className="text-muted-foreground pt-7 mb-3 tracking-[0.095em] uppercase font-semibold text-xs">
-          {postz.length} Total Posts
+          {postz.length} Total Posts {searchParams?.search ? "Found": ""}
           </p>
           {/* @ts-ignore */}
           <PostsList postz={posts}/>
