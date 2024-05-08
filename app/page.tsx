@@ -37,7 +37,7 @@ export default async function Home() {
         <div className="relative  ">
           <Avatar className="h-[8rem] w-[8rem] border-2  border-sky-500 dark:border-white p-2 rounded-full ">
             <AvatarImage
-              src="https://i1.sndcdn.com/artworks-G4s1eC0l7QRRhSOt-pGVyNA-t500x500.jpg"
+              src="https://images.unsplash.com/photo-1538947151057-dfe933d688d1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="@shadcn"
               className="rounded-full"
             />
